@@ -55,7 +55,6 @@ namespace reverse_string
                 }
                 else {
                     Console.WriteLine("\n{0} is NOT a palindrome!", sentence);
-
                 }
 
             }
