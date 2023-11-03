@@ -45,7 +45,19 @@ namespace reverse_string
                 }
                 //print the sentence in reverse
                 Console.WriteLine("\nThe reverse of {0} is {1}.", sentence, reverseSentence);
-                
+
+                //to verify if it's a palindrome, see if sentence is equal to reverseSentence
+                //if equal, it's palindrome else it's not a palindrome
+
+                if (sentence == reverseSentence)
+                {
+                    Console.WriteLine("\n{0} is a palindrome!", sentence);
+                }
+                else {
+                    Console.WriteLine("\n{0} is NOT a palindrome!", sentence);
+
+                }
+
             }
 
 
