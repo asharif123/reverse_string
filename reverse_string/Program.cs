@@ -35,6 +35,7 @@ namespace reverse_string
                     return;
                 }
 
+            //use for loop to take what user inputted and add each character in reverse
             for (int i = sentenceLength-1; i >= 0; i--)
             {
                 reverseSentence += sentence[i];
