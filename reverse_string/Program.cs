@@ -26,7 +26,7 @@ namespace reverse_string
             int sentenceLength = sentence.Length;
 
             //store the reverse of what user has inputted
-            string reverseSentence = "";
+            string reverseSentence = string.Empty;
 
             if (sentenceLength == 0) //if user does not enter any characters
             {
@@ -58,13 +58,7 @@ namespace reverse_string
                 }
 
             }
-
-
-
-
-
-
-
+            
         }
     }
 }
