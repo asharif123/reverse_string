@@ -29,35 +29,30 @@ namespace reverse_string
             string reverseSentence = string.Empty;
 
             if (sentenceLength == 0) //if user does not enter any characters
-            {
-                Console.WriteLine("Please enter a sentence having at least 1 character!");
-            }
-            else if (sentenceLength == 1) //if user only enters 1 character, print that out
-            {
-                Console.WriteLine(sentence);
-                Console.WriteLine("\nThe reverse of {0} is {1}.", sentence, sentence);
-            }
-            else //if user enters 2 or more characters, store characters in reverse in reverse sentence
-            {
-                for (int i = sentenceLength-1; i >= 0; i--)
                 {
-                    reverseSentence += sentence[i];
+                    Console.WriteLine("Please enter a sentence having at least 1 character!");
+                    //immediately exit the program
+                    return;
                 }
-                //print the sentence in reverse
-                Console.WriteLine("\nThe reverse of {0} is {1}.", sentence, reverseSentence);
 
-                //to verify if it's a palindrome, see if sentence is equal to reverseSentence
-                //if equal, it's palindrome else it's not a palindrome
+            for (int i = sentenceLength-1; i >= 0; i--)
+            {
+                reverseSentence += sentence[i];
+            }
+            
+            //print the sentence in reverse
+             Console.WriteLine("\nThe reverse of {0} is {1}.", sentence, reverseSentence);
 
-                if (sentence == reverseSentence)
+            //to verify if it's a palindrome, see if sentence is equal to reverseSentence
+            //if equal, it's palindrome else it's not a palindrome
+
+            if (sentence == reverseSentence)
                 {
                     Console.WriteLine("\n{0} is a palindrome!", sentence);
                 }
                 else {
                     Console.WriteLine("\n{0} is NOT a palindrome!", sentence);
                 }
-
-            }
             
         }
     }
