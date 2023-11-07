@@ -18,43 +18,42 @@ namespace reverse_string
         {
             //ask user to enter a string
             Console.WriteLine("Please enter a string:\n");
-            
+
             //variable to store what user has inputted
             string sentence = Console.ReadLine();
 
             //variable to get the length of the sentence
             int sentenceLength = sentence.Length;
 
-            //store the reverse of what user has inputted
+            //store the reverse of what user has inputted as an empty string
             string reverseSentence = string.Empty;
 
             if (sentenceLength == 0) //if user does not enter any characters
-                {
-                    Console.WriteLine("Please enter a sentence having at least 1 character!");
-                    //immediately exit the program
-                    return;
-                }
+            {
+                Console.WriteLine("Please enter a sentence having at least 1 character!");
+                //immediately exit the program
+                return;
+            }
 
             //use for loop to take what user inputted and add each character in reverse
-            for (int i = sentenceLength-1; i >= 0; i--)
+            for (int i = sentenceLength - 1; i >= 0; i--)
             {
                 reverseSentence += sentence[i];
             }
-            
-            //print the sentence in reverse
-             Console.WriteLine("\nThe reverse of {0} is {1}.", sentence, reverseSentence);
 
+            //print the sentence in reverse
+            Console.WriteLine("\nThe reverse of {0} is {1}.", sentence, reverseSentence);
             //to verify if it's a palindrome, see if sentence is equal to reverseSentence
             //if equal, it's palindrome else it's not a palindrome
 
             if (sentence == reverseSentence)
-                {
-                    Console.WriteLine("\n{0} is a palindrome!", sentence);
-                }
-                else {
-                    Console.WriteLine("\n{0} is NOT a palindrome!", sentence);
-                }
-            
+            {
+                Console.WriteLine("\n{0} is a palindrome!", sentence);
+            }
+            else
+            {
+                Console.WriteLine("\n{0} is NOT a palindrome!", sentence);
+            }
         }
     }
 }
