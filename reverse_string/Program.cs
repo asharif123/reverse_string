@@ -15,7 +15,7 @@ namespace reverse_string
         static void Main(string[] args)
         {
             //ask user to enter a string
-            Console.WriteLine("Enter characters that you would like to see reversed:\n");
+            Console.WriteLine("Enter at least 1 character that you would like to see reversed:\n");
 
             //variable to store what user has inputted
             string sentence = Console.ReadLine();
