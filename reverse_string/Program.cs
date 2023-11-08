@@ -33,11 +33,17 @@ namespace reverse_string
                 return;
             }
 
-            //use for loop to take what user inputted and add each character in reverse by
+            //use decrementing method to reverse a string
             //iterating from last to first character
-            for (int index = sentenceLength - 1; index >= 0; index--)
+            /*            for (int index = sentenceLength - 1; index >= 0; index--)
+                        {
+                            reverseSentence += sentence[index];
+                        }*/
+
+            //use incrementing method to reverse a string
+            for (int position = 0; position < sentenceLength; position++)
             {
-                reverseSentence += sentence[index];
+                reverseSentence += sentence[sentenceLength - 1 - position];
             }
 
             //print the sentence in reverse
