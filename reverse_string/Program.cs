@@ -33,13 +33,6 @@ namespace reverse_string
                 return;
             }
 
-            //use decrementing method to reverse a string
-            //iterating from last to first character
-            /*            for (int index = sentenceLength - 1; index >= 0; index--)
-                        {
-                            reverseSentence += sentence[index];
-                        }*/
-
             //use incrementing method to reverse a string
             for (int position = 0; position < sentenceLength; position++)
             {
@@ -53,11 +46,13 @@ namespace reverse_string
 
             if (sentence == reverseSentence)
             {
-                Console.WriteLine("\n{0} is a palindrome!", sentence);
+                Console.WriteLine($"\n{sentence} is a palindrome!");
+                ;
             }
             else
             {
-                Console.WriteLine("\n{0} is NOT a palindrome!", sentence);
+                Console.WriteLine($"\n{sentence} is a palindrome!");
+                ;
             }
         }
     }
