@@ -38,9 +38,9 @@ namespace reverse_string
 
             //print the sentence in reverse, using .Trim() to remove whitespaces
             Console.WriteLine($"\nThe reverse of {sentence.Trim()} is {reverseSentence.Trim()}.");
+
             //to verify if it's a palindrome, see if sentence is equal to reverseSentence
             //if equal, it's palindrome else it's not a palindrome
-
             if (sentence.Trim().ToLower() == reverseSentence.Trim().ToLower())
             {
                 Console.WriteLine($"\n{sentence.Trim()} is a palindrome!");
