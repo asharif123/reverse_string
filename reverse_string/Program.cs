@@ -20,10 +20,7 @@ namespace reverse_string
             //variable to store what user has inputted
             string sentence = Console.ReadLine();
 
-            //variable to get the length of the sentence
-            int sentenceLength = sentence.Length;
-
-            if (sentenceLength == 0) //if user does not enter any characters
+            if (sentence == string.Empty) //if user does not enter any characters
             {
                 Console.WriteLine("Please enter at least 1 character!");
                 //immediately exit the program
@@ -34,9 +31,9 @@ namespace reverse_string
             string reverseSentence = string.Empty;
 
             //use incrementing method to reverse a string
-            for (int position = 0; position < sentenceLength; position++)
+            for (int position = 0; position < sentence.Length; position++)
             {
-                reverseSentence += sentence[sentenceLength - 1 - position];
+                reverseSentence += sentence[sentence.Length - 1 - position];
             }
 
             //print the sentence in reverse, using .Trim() to remove whitespaces
