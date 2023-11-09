@@ -23,15 +23,15 @@ namespace reverse_string
             //variable to get the length of the sentence
             int sentenceLength = sentence.Length;
 
-            //store the reverse of what user has inputted as an empty string
-            string reverseSentence = string.Empty;
-
             if (sentenceLength == 0) //if user does not enter any characters
             {
-                Console.WriteLine("Please enter a sentence having at least 1 character!");
+                Console.WriteLine("Please enter at least 1 character!");
                 //immediately exit the program
                 return;
             }
+
+            //store the reverse of what user has inputted as an empty string
+            string reverseSentence = string.Empty;
 
             //use incrementing method to reverse a string
             for (int position = 0; position < sentenceLength; position++)
@@ -44,7 +44,7 @@ namespace reverse_string
             //to verify if it's a palindrome, see if sentence is equal to reverseSentence
             //if equal, it's palindrome else it's not a palindrome
 
-            if (sentence == reverseSentence)
+            if (sentence.ToLower() == reverseSentence.ToLower())
             {
                 Console.WriteLine($"\n{sentence.Trim()} is a palindrome!");
             }
