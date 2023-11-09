@@ -47,12 +47,10 @@ namespace reverse_string
             if (sentence == reverseSentence)
             {
                 Console.WriteLine($"\n{sentence.Trim()} is a palindrome!");
-                ;
             }
             else
             {
                 Console.WriteLine($"\n{sentence.Trim()} is a palindrome!");
-                ;
             }
         }
     }
