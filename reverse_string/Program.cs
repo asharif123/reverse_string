@@ -17,8 +17,8 @@ namespace reverse_string
             //ask user to enter a string
             Console.WriteLine("Enter at least 1 character that you would like to see reversed:\n");
 
-            //variable to store what user has inputted
-            string sentence = Console.ReadLine();
+            //variable to store what user has inputted and trim white spaces
+            string sentence = Console.ReadLine().Trim();
 
             if (sentence == string.Empty) //if user does not enter any characters
             {
@@ -37,17 +37,18 @@ namespace reverse_string
             }
 
             //print the sentence in reverse, using .Trim() to remove whitespaces
-            Console.WriteLine($"\nThe reverse of {sentence.Trim()} is {reverseSentence.Trim()}.");
+            Console.WriteLine($"\nThe reverse of {sentence} is {reverseSentence}.");
 
             //to verify if it's a palindrome, see if sentence is equal to reverseSentence
             //if equal, it's palindrome else it's not a palindrome
-            if (sentence.Trim().ToLower() == reverseSentence.Trim().ToLower())
+
+            if (sentence.ToLower() == reverseSentence.ToLower())
             {
-                Console.WriteLine($"\n{sentence.Trim()} is a palindrome!");
+                Console.WriteLine($"\n{sentence} is a palindrome!");
             }
             else
             {
-                Console.WriteLine($"\n{sentence.Trim()} is a palindrome!");
+                Console.WriteLine($"\n{sentence} is NOT a palindrome!");
             }
         }
     }
