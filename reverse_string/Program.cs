@@ -18,7 +18,7 @@ namespace reverse_string
             Console.WriteLine("Enter at least 1 character that you would like to see reversed:\n");
 
             //variable to store what user has inputted and trim white spaces
-            string sentence = Console.ReadLine().Trim();
+            string sentence = Console.ReadLine().Trim().ToLower();
 
             if (sentence == string.Empty) //if user does not enter any characters
             {
@@ -42,7 +42,7 @@ namespace reverse_string
             //to verify if it's a palindrome, see if sentence is equal to reverseSentence
             //if equal, it's palindrome else it's not a palindrome
 
-            if (sentence.ToLower() == reverseSentence.ToLower())
+            if (sentence == reverseSentence)
             {
                 Console.WriteLine($"\n{sentence} is a palindrome!");
             }
